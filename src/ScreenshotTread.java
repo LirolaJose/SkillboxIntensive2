@@ -19,7 +19,7 @@ public class ScreenshotTread extends Thread {
     public void run() {
         BufferedImage image = null;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 5; i++) {
             try {
                 image = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
                 ImageIO.write(image, "png", outputStream);

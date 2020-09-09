@@ -1,15 +1,16 @@
 import com.dropbox.core.v2.DbxClientV2;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+        import java.io.ByteArrayInputStream;
+        import java.io.ByteArrayOutputStream;
+        import java.io.InputStream;
+        import java.text.SimpleDateFormat;
+        import java.time.LocalDateTime;
+        import java.time.format.DateTimeFormatter;
+        import java.util.Date;
 
 public class UploaderToDropbox extends Thread {
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
-    Date now = new Date();
-    String fileName = dateFormat.format(now);
+    LocalDateTime now = LocalDateTime.now();
+    String fileName = now.format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
     private DbxClientV2 client;
     private ByteArrayOutputStream outputStream;
 

@@ -14,7 +14,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException, AWTException {
-        String ACCESS_TOKEN = "O0zWUWOXH_AAAAAAAAAAAQRK-V8990YW_kdk2cWfLnmOFpF5-Lk3rVyR6dvIp7ls";
+        String ACCESS_TOKEN = "nVbb4_VZsncAAAAAAAAAASKNRvePaQXtZr5SqLgj4_m0OsJdRxm7DAaPFpWG9wtM";
         DbxRequestConfig config = DbxRequestConfig.newBuilder("dropbox/java-tutorial").build();
         DbxClientV2 client = new DbxClientV2(config, ACCESS_TOKEN);
         ScreenshotTread screenshotTread = new ScreenshotTread(client);
